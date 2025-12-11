@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>UI Component Library — Professional Neutral</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ====== Page Header / Nav ====== -->
+    <header class="site-header">
+      <div class="container header-grid">
+        <div class="brand">
+          <a href="#" class="brand-logo">DesignKit</a>
+          <span class="brand-sub">UI Library</span>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#buttons">Buttons</a>
+          <a href="#cards">Cards</a>
+          <a href="#hero">Hero</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="#patterns">Grids</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ====== Page Intro ====== -->
+    <section class="intro container">
+      <h1>UI Component Library — Professional Neutral</h1>
+      <p class="lead">
+        A compact library of reusable UI pieces you built this week: buttons,
+        cards, hero variations, navigation, footers, testimonials and grid
+        patterns — all responsive and easy to reuse for future projects.
+      </p>
+    </section>
+
+    <!-- ====== Buttons Section ====== -->
+    <section id="buttons" class="container section">
+      <h2>Buttons</h2>
+
+      <div class="demo-row">
+        <div class="component-card">
+          <h3>Primary</h3>
+          <button class="btn btn-primary">Primary</button>
+          <pre class="snippet">
+&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;</pre
+          >
+        </div>
+
+        <div class="component-card">
+          <h3>Outline</h3>
+          <button class="btn btn-outline">Outline</button>
+          <pre class="snippet">
+&lt;button class="btn btn-outline"&gt;Outline&lt;/button&gt;</pre
+          >
+        </div>
+
+        <div class="component-card">
+          <h3>Ghost (subtle)</h3>
+          <button class="btn btn-ghost">Ghost</button>
+          <pre class="snippet">
+&lt;button class="btn btn-ghost"&gt;Ghost&lt;/button&gt;</pre
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Hero Variations ====== -->
+    <section id="hero" class="container section">
+      <h2>Hero Variations</h2>
+
+      <div class="demo-row grid-3">
+        <!-- Centered hero -->
+        <article class="hero-card">
+          <div class="hero-variant hero-centered">
+            <h3>Hero — Centered</h3>
+            <p class="muted">Use for emotional, brand-focused landing pages.</p>
+            <div class="hero-centered-box">
+              <h1 class="hero-title">Quiet Luxury</h1>
+              <p class="hero-sub">Minimal, timeless pieces.</p>
+              <div class="hero-actions">
+                <button class="btn btn-primary">Explore</button>
+                <button class="btn btn-outline">Learn</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Split hero -->
+        <article class="hero-card">
+          <div class="hero-variant hero-split">
+            <div
+              class="split-media"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1521334884684-d80222895322?q=80&w=1400&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="split-copy">
+              <h3>Hero — Split</h3>
+              <p class="muted">
+                Image left, text right — classic product focus.
+              </p>
+              <h2 class="split-title">The Voyager Coat</h2>
+              <p class="split-desc">
+                Tailored proportions with relaxed comfort.
+              </p>
+              <button class="btn btn-primary">View Product</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Minimal hero with CTA -->
+        <article class="hero-card">
+          <div class="hero-variant hero-minimal">
+            <h3>Hero — Minimal</h3>
+            <p class="muted">Tight layout for promotions & season launches.</p>
+            <div class="minimal-box">
+              <h2>Season Sale</h2>
+              <p>Up to 40% off select styles.</p>
+              <button class="btn btn-outline">Shop Sale</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====== Feature Cards ====== -->
+    <section id="cards" class="container section">
+      <h2>Feature & Product Cards</h2>
+
+      <div class="demo-row">
+        <!-- Feature cards -->
+        <div class="component-card">
+          <h3>Feature Card</h3>
+          <div class="feature-card">
+            <div
+              class="feature-media"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1524275539700-cf51138f6797?q=80&w=800&auto=format&fit=crop');
+              "
+            ></div>
+            <h4>Premium Materials</h4>
+            <p class="muted">Long-lasting fabrics with considered sourcing.</p>
+          </div>
+          <pre class="snippet">
+&lt;article class="feature-card"&gt;...&lt;/article&gt;</pre
+          >
+        </div>
+
+        <!-- Product cards -->
+        <div class="component-card">
+          <h3>Product Card</h3>
+          <article class="product-card">
+            <div
+              class="product-media"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=800&auto=format&fit=crop');
+              "
+            ></div>
+            <div class="product-body">
+              <h4 class="product-title">Classic Shirt</h4>
+              <div class="product-meta">
+                <span class="price">₹2,499</span>
+                <button class="btn btn-ghost">Add</button>
+              </div>
+            </div>
+          </article>
+          <pre class="snippet">
+&lt;article class="product-card"&gt;...&lt;/article&gt;</pre
+          >
+        </div>
+
+        <!-- Testimonial small -->
+        <div class="component-card">
+          <h3>Testimonial</h3>
+          <blockquote class="testimonial-card">
+            <p>“Excellent quality and fast delivery — I recommend it.”</p>
+            <footer>- Sanya</footer>
+          </blockquote>
+          <pre class="snippet">
+&lt;blockquote class="testimonial-card"&gt;...&lt;/blockquote&gt;</pre
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Testimonials Expanded ====== -->
+    <section id="testimonials" class="container section">
+      <h2>Testimonials</h2>
+      <div class="testimonials-grid">
+        <div class="test-card">
+          <p>“The jacket fits perfectly. The fabric is amazing.”</p>
+          <h4>— Rahul, Mumbai</h4>
+        </div>
+        <div class="test-card">
+          <p>“Customer support was excellent and responsive.”</p>
+          <h4>— Ananya, Delhi</h4>
+        </div>
+        <div class="test-card">
+          <p>“Packaging premium; product matched the photos exactly.”</p>
+          <h4>— Vikram, Bengaluru</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Grid Patterns / Layout Examples ====== -->
+    <section id="patterns" class="container section">
+      <h2>Responsive Grid Patterns</h2>
+
+      <div class="pattern-row">
+        <div class="pattern pattern-4">
+          <h4>4-column grid</h4>
+          <div class="grid-sample grid-4">
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+            <div class="cell">4</div>
+          </div>
+        </div>
+
+        <div class="pattern pattern-3">
+          <h4>3-column grid</h4>
+          <div class="grid-sample grid-3">
+            <div class="cell">A</div>
+            <div class="cell">B</div>
+            <div class="cell">C</div>
+          </div>
+        </div>
+
+        <div class="pattern pattern-fluid">
+          <h4>Auto-fit fluid</h4>
+          <div class="grid-sample grid-auto">
+            <div class="cell">item</div>
+            <div class="cell">item</div>
+            <div class="cell">item</div>
+            <div class="cell">item</div>
+            <div class="cell">item</div>
+            <div class="cell">item</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Footer (component showcase) ====== -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>DesignKit</strong><br />
+          UI Component Library
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#">Docs</a>
+          <a href="#">GitHub</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+      <!-- <div class="attribution">Built with ♥ for learning — Week 2</div> -->
+    </footer>
+  </body>
+</html>

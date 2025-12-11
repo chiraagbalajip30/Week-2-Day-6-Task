@@ -1,0 +1,461 @@
+/* =========================
+   COMPONENTS.CSS (Professional Neutral)
+   ========================= */
+
+/* -------- Design tokens (spacing/colors) -------- */
+:root {
+  --max-width: 1200px;
+  --container-pad: 24px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+
+  --bg: #ffffff;
+  --muted: #6b6b6b;
+  --text: #111111;
+  --surface: #f7f7f7;
+  --accent: #7b4eff; /* subtle purple accent */
+  --border: #e9e9e9;
+  --card-shadow: 0 8px 20px rgba(16, 16, 16, 0.04);
+}
+
+/* -------- Base resets -------- */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* -------- Layout containers -------- */
+.container {
+  width: calc(100% - 48px);
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+/* -------- Header / nav -------- */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+.header-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 18px 0;
+}
+.brand-logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+.brand-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* main nav */
+.main-nav {
+  justify-self: end;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 24px;
+  align-items: center;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 0;
+}
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* -------- Intro / section base -------- */
+.intro {
+  padding: 40px 0;
+  text-align: left;
+}
+.intro h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+.lead {
+  color: var(--muted);
+  max-width: 72ch;
+}
+
+/* Utility */
+.section {
+  padding: 36px 0;
+}
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+/* -------- Demo layout helpers -------- */
+.demo-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+.component-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  min-width: 220px;
+  flex: 1 1 260px;
+}
+
+/* small code snippet block */
+.snippet {
+  background: #f4f4f6;
+  color: #333;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  overflow: auto;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background-color 0.12s ease;
+  font-size: 0.95rem;
+}
+.btn:focus {
+  outline: 3px solid color-mix(in srgb, var(--accent) 12%, transparent);
+  outline-offset: 2px;
+}
+
+/* styles */
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(123, 78, 255, 0.08);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(123, 78, 255, 0.12);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn-outline:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px dashed #eee;
+}
+.btn-ghost:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+/* ===== Hero Variants ===== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+.hero-card {
+  background: transparent;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* centered hero */
+.hero-centered {
+  background: linear-gradient(180deg, #fff, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  border-radius: 10px;
+  min-height: 220px;
+}
+.hero-centered-box {
+  text-align: center;
+}
+.hero-title {
+  font-size: 1.6rem;
+  margin: 6px 0;
+}
+.hero-sub {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* split hero */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 240px;
+}
+.split-media {
+  background-size: cover;
+  background-position: center;
+}
+.split-copy {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.split-title {
+  font-size: 1.25rem;
+  margin: 8px 0;
+}
+.split-desc {
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+/* minimal hero */
+.hero-minimal {
+  padding: 18px;
+  border-radius: 8px;
+  background: var(--surface);
+  text-align: center;
+}
+
+/* ===== Feature Card ===== */
+.feature-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--card-shadow);
+}
+.feature-media {
+  height: 140px;
+  background-size: cover;
+  background-position: center;
+}
+.feature-card h4 {
+  padding: 12px 16px 6px 16px;
+  margin: 0;
+}
+.feature-card p {
+  padding: 0 16px 16px 16px;
+  color: var(--muted);
+}
+
+/* ===== Product Card ===== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  width: 260px;
+}
+.product-media {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+.product-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.product-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* ===== Testimonial ===== */
+.testimonial-card {
+  border-left: 4px solid var(--accent);
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  max-width: 320px;
+}
+.testimonial-card p {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+/* ===== Testimonials grid ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* ===== Grid Samples ===== */
+.grid-sample {
+  display: grid;
+  gap: 12px;
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+.pattern .cell,
+.grid-sample .cell {
+  background: #fff;
+  border: 1px dashed var(--border);
+  padding: 18px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0;
+  margin-top: 36px;
+  background: var(--bg);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 12px 0;
+}
+.footer-nav {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+}
+.footer-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+
+/* ===== Small screens (responsive) ===== */
+@media (max-width: 992px) {
+  .header-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .main-nav {
+    justify-self: start;
+    margin-top: 8px;
+  }
+  .demo-row {
+    gap: 14px;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .values,
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+  .demo-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .product-card {
+    width: 100%;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    justify-self: stretch;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+  }
+}
